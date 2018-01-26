@@ -1,0 +1,20 @@
+$animation-type-list: 
+fade,
+fade-up;
+@each $animation in $animation-type-list {
+  .#{$animation}-enter-active,
+  .#{$animation}-leave-active {
+    transition: all $transition-timing-function $transition-duration;
+  }
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
+}
+
+.fade-up-enter,
+.fade-up-leave-active {
+  opacity: 0;
+  transform: translate3d(0, -30%, 0);
+}

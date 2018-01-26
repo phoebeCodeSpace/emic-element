@@ -1,0 +1,39 @@
+.#{$css-prefix}-alert {
+  position: relative;
+  border-radius: 4px;
+  color: $text-color;
+  font-size: 12px;
+  padding: 5px 15px;
+  
+  $type-list: (info:$primary-color, warning:$warning-color, success:$success-color, error:$error-color);
+  @each $type,
+  $color in $type-list {
+    &.#{$css-prefix}-alert-#{$type} {
+      background-color: mix($white-color, $color, 80%);
+      border: 1px solid mix($white-color, $color, 60%)
+    }
+    .icon-#{$type}{
+      font-size: 14px;
+      color: $color;
+    }
+  }
+
+  
+ 
+
+
+  &.emic-alert-center{
+    text-align: center;
+  }
+
+  .emic-alert-close{
+    position: absolute;
+    right: 15px;
+    @include center-translate(y);
+    cursor: pointer;
+    .icon-close{
+      color: $text-color;
+    }
+  }
+
+}

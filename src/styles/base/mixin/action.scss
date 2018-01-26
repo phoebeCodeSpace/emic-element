@@ -1,0 +1,6 @@
+@mixin no_select(){
+  user-select:none;
+}
+@mixin setTapColor($color: rgba(0, 0, 0, 0)) {
+  -webkit-tap-highlight-color: $color;
+}

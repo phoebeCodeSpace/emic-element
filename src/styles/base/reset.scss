@@ -1,0 +1,27 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+}
+body{
+  line-height: 1.5;
+  color: #333;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+a{
+  text-decoration:none;
+  &:hover{
+    text-decoration:none;
+  }
+}
+ul,li{
+  list-style:none;
+}
+
+input,button{
+  border: 0;
+  outline: 0;
+  -webkit-appearance: none;
+}

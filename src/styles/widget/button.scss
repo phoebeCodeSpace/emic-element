@@ -1,0 +1,68 @@
+@mixin type-btn($main-color) {
+    background-color: $main-color;
+    border: 1px solid $main-color;
+    color: #fff;
+}
+@mixin disabled-btn($text-color, $border-color, $bg-color:$border-color) {
+  background-color: mix($white-color, $bg-color, 50%);
+  border-color: mix($white-color, $border-color, 50%);
+  color: mix($white-color, $text-color, 50%);
+}
+@mixin plain-btn($main-color) {
+  background-color: mix($white-color, $main-color, 90%);
+  border-color: mix($white-color, $main-color, 60%);
+  color: mix($white-color, $main-color, 10%);
+}
+
+
+.#{$css-prefix}-btn {
+  line-height: 1;
+  font-size: 14px;
+  background-color: $white-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+  padding: $btn-default-padding;
+  border-radius: $btn-default-radius;
+  cursor: pointer;
+
+  &.is-round {
+    border-radius: 20px;
+  }
+  
+  &:disabled {
+    color: mix($white-color, $text-color, 50%);
+    border-color: mix($white-color, $border-color, 50%);
+    cursor: not-allowed;
+  }
+
+  &.#{$css-prefix}-btn-small {
+    padding: $btn-small-padding;
+    font-size: 12px;
+  }
+  &.#{$css-prefix}-btn-large {
+    padding: $btn-large-padding;
+  }
+
+
+  &.#{$css-prefix}-btn-primary {
+    @include type-btn($primary-color);
+    &:disabled {
+      @include disabled-btn($white-color, $primary-color);
+    }
+    &.is-plain {
+      @include plain-btn($primary-color);
+    }
+  }
+   &.#{$css-prefix}-btn-danger {
+     @include type-btn($danger-color);
+     &:disabled {
+       @include disabled-btn($white-color,$danger-color);
+     }
+     &.is-plain {
+       @include plain-btn($danger-color);
+       &:disabled {
+         @include disabled-btn($danger-color, $danger-color,$white-color);
+       }
+     }
+   }
+}

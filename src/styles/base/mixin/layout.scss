@@ -1,0 +1,49 @@
+@mixin fullscreen() {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+@mixin center-translate($direction: both) {
+  position: absolute;
+  @if $direction==both {
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+  }
+  @else if $direction==x {
+    left: 50%;
+    transform: translate3d(-50%, 0, 0);
+  }
+  @else if $direction==y {
+    top: 50%;
+    transform: translate3d(0, -50%, 0);
+  }
+}
+
+@mixin center-flex($direction: both) {
+  display: flex;
+  @if $direction==both {
+    justify-content: center;
+    align-items: center;
+  }
+  @else if $direction==x {
+    justify-content: center;
+  }
+  @else if $direction==y {
+    align-items: center;
+  }
+}
+
+@mixin clearfix() {
+  &::before,
+  &::after {
+    content: "";
+    display: table;
+  }
+  &::after {
+    clear: both;
+  }
+}

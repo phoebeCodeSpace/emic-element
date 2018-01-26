@@ -1,0 +1,45 @@
+.#{$css-prefix}-switch{
+  display: inline-block;
+  position: relative;
+  @include size($switch-base-width, $switch-base-height);
+  border-radius: $switch-base-height;
+  background-color: $switch-default-color;
+  border: 1px solid $switch-default-color;
+  cursor: pointer;
+  @include no_select();
+  transition: all $transition-timing-function $transition-duration;
+
+  &::after{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    @include round($switch-base-height - 2px);
+    background-color: $white-color;
+    top: 1px;
+    left: 1px;
+    transition: left ease-in-out .2s,width ease-in-out .2s;
+  }
+
+  // &:active{
+  //   &::after{
+  //     width: 30px;
+  //   }
+  // }
+
+  &.#{$css-prefix}-switch-checked{
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    &::after{
+      left: $switch-base-width - $switch-base-height + 1px;
+    }
+    &.#{$css-prefix}-switch-disabled{
+      background-color: mix($white-color, $primary-color, $disabled-shade-percent);
+      border: 1px solid mix($white-color, $primary-color, $disabled-shade-percent);
+    }
+  }
+  &.#{$css-prefix}-switch-disabled{
+    background-color: mix($white-color, $switch-default-color, $disabled-shade-percent);
+    border: 1px solid mix($white-color, $switch-default-color, $disabled-shade-percent);
+    cursor: not-allowed;
+  }
+}
