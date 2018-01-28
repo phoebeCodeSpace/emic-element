@@ -1,0 +1,44 @@
+.#{$css-prefix}-pagination{
+  font-size: 0;
+  .#{$css-prefix}-pagination-total{
+    font-size: 13px;
+    margin-right: 20px;
+  }
+  ul{
+    display: inline-block;
+
+    .#{$css-prefix}-icon{
+    }
+
+    li{
+      display: inline-block;
+      font-size: 13px;
+      color: $text-color;
+      border: 1px solid $border-color;
+      @include size($pagination-size);
+      line-height: $pagination-size;
+      text-align: center;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: $transition;
+
+      &+li{
+        margin: 0 5px;
+      }
+      &.#{$css-prefix}-pagination-current {
+        background-color: $primary-color;
+        color: $white-color;
+        border: 1px solid $primary-color;
+      }
+      &.#{$css-prefix}-pagination-disabled{
+        cursor: not-allowed;
+        color: mix($white-color, $text-color, $disabled-shade-percent);
+        border: 1px solid mix($white-color, $border-color, $disabled-shade-percent);
+      }
+      &:not(.#{$css-prefix}-pagination-current):not(.#{$css-prefix}-pagination-disabled):hover {
+        color: $primary-color;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
+}

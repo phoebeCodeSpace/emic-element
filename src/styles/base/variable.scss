@@ -16,7 +16,7 @@ $error-color: #fe4e4e;
 $background-color : #f8f9fd;
 $border-color : #d8dce5;    // use for button/input border
 
-$disabled-shade-percent: 80%;
+$disabled-shade-percent: 60%;
 
 
 // buttons
@@ -37,9 +37,16 @@ $switch-base-width: 50px;
 $switch-base-height: 24px;
 
 
+// pagination
+$pagination-size: 30px;
+
+
 // transition
 $transition-timing-function:ease-in-out;
 $transition-duration: 0.35s;
+$transition: all $transition-timing-function $transition-duration;
+
+
 
 
 

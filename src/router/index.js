@@ -3,11 +3,16 @@ import Router from 'vue-router'
 import pageButton from '@/pages/pageButton'
 import pageAlert from '@/pages/pageAlert'
 import pageSwitch from '@/pages/pageSwitch'
+import pagePagination from '@/pages/pagePagination'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
+    {
+      path: '/',
+      redirect: '/button'
+    },
     {
       path: '/button',
       name: 'pageButton',
@@ -20,6 +25,19 @@ export default new Router({
       path: '/switch',
       name: 'pageSwitch',
       component: pageSwitch
+    }, {
+      path: '/pagination',
+      name: 'pagePagination',
+      component: pagePagination
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (window.location.pathname){
+    window.location.pathname = ""
+  }
+  next()
+})
+
+export default router;

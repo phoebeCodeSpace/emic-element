@@ -20,11 +20,16 @@
     transition: left ease-in-out .2s,width ease-in-out .2s;
   }
 
-  // &:active{
-  //   &::after{
-  //     width: 30px;
-  //   }
-  // }
+  &:active{
+    &.#{$css-prefix}-switch-checked{
+      &::after {
+        left: $switch-base-width - $switch-base-height - 5px;
+      }
+    }
+    &::after{
+      width: $switch-base-height + 5px;
+    }
+  }
 
   &.#{$css-prefix}-switch-checked{
     background-color: $primary-color;
