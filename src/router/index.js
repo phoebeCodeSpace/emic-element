@@ -4,6 +4,7 @@ import pageButton from '@/pages/pageButton'
 import pageAlert from '@/pages/pageAlert'
 import pageSwitch from '@/pages/pageSwitch'
 import pagePagination from '@/pages/pagePagination'
+import pageInput from '@/pages/pageInput'
 
 Vue.use(Router)
 
@@ -29,6 +30,10 @@ const router = new Router({
       path: '/pagination',
       name: 'pagePagination',
       component: pagePagination
+    }, {
+      path: '/input',
+      name: 'pageInput',
+      component: pageInput
     }
   ]
 })

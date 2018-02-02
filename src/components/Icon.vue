@@ -1,5 +1,5 @@
 <template>
-  <i :class="iconClasses"></i>
+  <i :class="iconClasses" @click="handleClick"></i>
 </template>
 
 <script>
@@ -15,6 +15,11 @@ export default {
       return [
         [`${prefixCls}-icon`,`icon-${this.type}`]
       ]
+    }
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit('click',e)
     }
   },
 };

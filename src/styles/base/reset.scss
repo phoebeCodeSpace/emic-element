@@ -5,10 +5,12 @@ html {
 body{
   line-height: 1.5;
   color: #333;
+  font-size: $font-base;
 }
 *{
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 a{
   text-decoration:none;
@@ -20,8 +22,12 @@ ul,li{
   list-style:none;
 }
 
-input,button{
+input,button,textarea{
   border: 0;
   outline: 0;
   -webkit-appearance: none;
+}
+textarea{
+  resize: none;
+  display: block;
 }

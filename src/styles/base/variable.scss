@@ -1,23 +1,23 @@
-$css-prefix : emic;
+$css-prefix: emic;
+// font
+$font-base: 14px;
 
 // colors
 $white-color: #fff;
-$primary-color : #4cabe9;
-$success-color : #6ed739;
-$warning-color : #ffb31a;
+$primary-color: #4cabe9;
+$success-color: #6ed739;
+$warning-color: #ffb31a;
 $danger-color: #fe4e4e;
-$info-color : #909399;
-$link-color : #4cabe9;
-$title-color : #303133;
-$text-color : #606265;
+$info-color: #909399;
+$link-color: #4cabe9;
+$title-color: #303133;
+$text-color: #606265;
 $error-color: #fe4e4e;
-
-
-$background-color : #f8f9fd;
-$border-color : #d8dce5;    // use for button/input border
-
+$background-color: #f8f9fd;
+$border-color: #d8dce5; // use for button/input border
+$border-hover-color: mix(#000, #d8dce5, 10%);
 $disabled-shade-percent: 60%;
-
+$placeholder-color: #b4bccd;
 
 // buttons
 $btn-small-padding:5px 8px;
@@ -25,30 +25,26 @@ $btn-default-padding: 7px 16px;
 $btn-large-padding: 10px 21px;
 $btn-small-radius: 3px;
 $btn-default-radius: 4px;
-$btn-large-radius : 6px;
+$btn-large-radius: 6px;
 $btn-active-shade-percent: 40%;
 $btn-hover-shade-percent: 40%;
-
-
+// input
+$input-base-bg: #fff;
+$input-disabled-bg: mix($placeholder-color, #fff, 15%);
 
 // switch
 $switch-default-color: #ccc;
 $switch-base-width: 50px;
 $switch-base-height: 24px;
 
-
 // pagination
 $pagination-size: 30px;
+
+
+
 
 
 // transition
 $transition-timing-function:ease-in-out;
 $transition-duration: 0.35s;
 $transition: all $transition-timing-function $transition-duration;
-
-
-
-
-
-
-

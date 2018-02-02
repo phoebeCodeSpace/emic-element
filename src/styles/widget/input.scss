@@ -1,0 +1,58 @@
+.#{$css-prefix}-wrap-input {
+  position: relative;
+  .#{$css-prefix}-inner-input,
+  .#{$css-prefix}-inner-textarea {
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    font-size: $font-base;
+    transition: $transition;
+    background-color: $input-base-bg;
+    &::placeholder {
+      color: $placeholder-color;
+    }
+    ;
+    &:not(:disabled):hover {
+      border: 1px solid $border-hover-color;
+    }
+    &:not(:disabled):focus {
+      border: 1px solid $primary-color;
+    }
+    &:disabled {
+      cursor: not-allowed;
+      background-color: $input-disabled-bg;
+    }
+  }
+  .#{$css-prefix}-inner-input {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+  }
+  .#{$css-prefix}-inner-textarea {
+    padding: 8px 15px;
+  }
+  .#{$css-prefix}-input-suffix {
+    padding-right: 30px;
+  }
+  .#{$css-prefix}-input-prefix {
+    padding-left: 30px;
+  }
+
+  .input-prefix,
+  .input-suffix {
+    @include center-translate(y);
+    color: $placeholder-color;
+    [class^=#{$css-prefix}-icon] {
+      font-size: 16px;
+    }
+  }
+  .input-prefix {
+    left: 8px;
+  }
+  .input-suffix {
+    right: 8px;
+    .icon-error {
+      cursor: pointer;
+    }
+  }
+}
