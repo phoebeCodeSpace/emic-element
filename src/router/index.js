@@ -7,6 +7,7 @@ import pagePagination from '@/pages/pagePagination'
 import pageInput from '@/pages/pageInput'
 import pageRadio from '@/pages/pageRadio'
 import pageCheckbox from '@/pages/pageCheckbox'
+import pageIcon from '@/pages/pageIcon'
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ const router = new Router({
     {
       path: '/',
       redirect: '/button'
+    },
+    {
+      path: '/icon',
+      name: 'pageIcon',
+      component: pageIcon
     },
     {
       path: '/button',

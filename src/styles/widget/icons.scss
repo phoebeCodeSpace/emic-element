@@ -15,17 +15,16 @@ $icon-prefix: #{$css-prefix}-icon;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .icon-close:before { content: "\e64d"; }
 
+// tips
 .icon-info:before { content: "\e67d"; }
 .icon-error:before { content: "\e62b"; }
 .icon-success:before { content: "\e726"; }
 .icon-warning:before { content: "\e836"; }
 
-.icon-arrow-up:before { content: "\e62c"; }
-.icon-arrow-right:before { content: "\e62e"; }
-.icon-arrow-down:before { content: "\e62f"; }
-
+// arrow
 .icon-arrow-left:before { content: "\e697"; }
 .icon-arrow-up:before { content: "\e6a5"; }
 .icon-arrow-down:before { content: "\e6a6"; }
@@ -33,7 +32,25 @@ $icon-prefix: #{$css-prefix}-icon;
 
 // form
 .icon-search:before { content: "\e6ac"; }
+.icon-search-2:before { content: "\e62c"; }
+
 .icon-unchecked:before { content: "\e64a"; }
 .icon-checked:before { content: "\e64b"; }
 .icon-date:before { content: "\e65e"; }
 .icon-time:before { content: "\e64f"; }
+.icon-upload:before { content: "\e656"; }
+.icon-refresh:before { content: "\e6aa"; }
+
+// loading
+.icon-loading:before { content: "\e600"; }
+.icon-loading_icon:before { content: "\e6b4"; }
+
+// table
+.icon-more:before {content: "\e787";}
+.icon-trash:before { content: "\e645"; }
+.icon-edit:before { content: "\e646"; }
+.icon-add:before { content: "\e64e"; }
+
+// view
+.icon-order:before { content: "\e647"; }
+.icon-tips:before { content: "\e64c"; }

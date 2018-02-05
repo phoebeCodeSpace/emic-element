@@ -34,7 +34,7 @@
 <script>
 import { prefixCls } from "@/utils/config";
 import { oneOf } from "@/utils/assist";
-import Icon from "@/components/Icon";
+import Icon from "@/components/icon";
 export default {
   name: "Input",
   components: {

@@ -24,7 +24,7 @@
 
 <script>
 import { prefixCls } from "@/utils/config";
-import Icon from "@/components/Icon";
+import Icon from "@/components/icon";
 export default {
   name: "pagination",
   components: {

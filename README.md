@@ -7,6 +7,7 @@
 
 ### base
 - [x] Icon 图标
+- [ ] Grid 栅格
 
 ### form
 - [ ] Button 按钮
@@ -14,6 +15,7 @@
 - [x] Radio 单选框
 - [ ] Checkbox 复选框
 - [x] Switch 开关
+- [ ] Select 选择框
 - [ ] Update 上传
 
 ### data

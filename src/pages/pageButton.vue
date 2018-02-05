@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import Button from "@/components/Button";
+import Button from "@/components/button";
 export default {
   name: "page-button",
   components: {
