@@ -10,8 +10,11 @@
 
 ### form
 - [ ] Button 按钮
-- [ ] Input 输入框
+- [x] Input 输入框
+- [x] Radio 单选框
+- [ ] Checkbox 复选框
 - [x] Switch 开关
+- [ ] Update 上传
 
 ### data
 - [ ] Pagination 分页

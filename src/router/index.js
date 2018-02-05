@@ -5,6 +5,8 @@ import pageAlert from '@/pages/pageAlert'
 import pageSwitch from '@/pages/pageSwitch'
 import pagePagination from '@/pages/pagePagination'
 import pageInput from '@/pages/pageInput'
+import pageRadio from '@/pages/pageRadio'
+import pageCheckbox from '@/pages/pageCheckbox'
 
 Vue.use(Router)
 
@@ -34,6 +36,14 @@ const router = new Router({
       path: '/input',
       name: 'pageInput',
       component: pageInput
+    },{
+      path: '/radio',
+      name: 'pageRadio',
+      component: pageRadio
+    },{
+      path: '/checkbox',
+      name: 'pageCheckbox',
+      component: pageCheckbox
     }
   ]
 })

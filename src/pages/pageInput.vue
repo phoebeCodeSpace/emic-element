@@ -34,6 +34,24 @@
           <td>[Boolean]</td>
           <td>false</td>          
         </tr>
+         <tr>
+          <td>clearable</td>
+          <td>是否可清空</td>
+          <td>[Boolean]</td>
+          <td>false</td>          
+        </tr>
+         <tr>
+          <td>prefix-icon</td>
+          <td>前置icon</td>
+          <td>[String]</td>
+          <td>/</td>          
+        </tr>
+         <tr>
+          <td>suffix-icon</td>
+          <td>后置icon</td>
+          <td>[String]</td>
+          <td>/</td>          
+        </tr>
       </tbody>
     </table>
 
@@ -70,7 +88,9 @@
     <Input placeholder="请输入内容" clearable/>
     <p>prefix-icon</p>    
     <Input placeholder="请输入内容" prefix-icon="search"/>
-    
+    <p>suffix-icon</p>    
+    <Input placeholder="请输入内容" suffix-icon="date"/>
+    <Input placeholder="请输入内容" suffix-icon="time"/>
   </div>
 </template>
 

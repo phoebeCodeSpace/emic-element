@@ -31,6 +31,7 @@ $btn-hover-shade-percent: 40%;
 // input
 $input-base-bg: #fff;
 $input-disabled-bg: mix($placeholder-color, #fff, 15%);
+$radio-checked-disabled-bg: mix($placeholder-color, #fff, 60%);
 
 // switch
 $switch-default-color: #ccc;

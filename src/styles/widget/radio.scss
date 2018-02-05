@@ -1,0 +1,61 @@
+.#{$css-prefix}-radio {
+  cursor: pointer;
+  @include no_select;
+  &+.#{$css-prefix}-radio {
+    margin-left: 10px;
+  }
+  .#{$css-prefix}-radio-icon {
+    position: relative;
+    display: inline-block;
+    @include round(14px);
+    background-color: #fff;
+    border: 1px solid $border-color;
+    transition: all $transition-timing-function 0.15s;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      display: table;
+      @include round(8px);
+      opacity: 0;
+      transform: scale(0);
+      transition: inherit;
+    }
+    &.#{$css-prefix}-radio-icon-checked {
+      &::after {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  /* 置灰radio */
+  &.#{$css-prefix}-radio-disabled {
+    .#{$css-prefix}-radio-icon {
+      background-color: $input-disabled-bg;
+    }
+    .#{$css-prefix}-radio-icon-checked {
+      &::after {
+        background-color: $radio-checked-disabled-bg;
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  }
+  /* 正常radio*/
+  &:not(.#{$css-prefix}-radio-disabled) .#{$css-prefix}-radio-icon {
+    &:hover {
+      border: 1px solid $border-hover-color;
+    }
+    &.#{$css-prefix}-radio-icon-checked {
+      border: 1px solid $primary-color;
+      box-shadow: 0 0 5px rgba($primary-color, .8);
+      &::after {
+        background-color: $primary-color;
+      }
+    }
+  }
+  span {
+    vertical-align: middle;
+  }
+}

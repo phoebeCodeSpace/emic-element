@@ -13,6 +13,7 @@
       >
       <span class="input-suffix">
         <Icon type="error" v-if="clearable && currentValue" @click="clear"></Icon>
+        <Icon :type="suffixIcon" v-else-if="suffixIcon"></Icon>
       </span>
     </template>
 
@@ -108,7 +109,7 @@ export default {
   },
   created() {},
   mounted() {
-    console.log(this.$props);
+    // console.log(this.$props);
   }
 };
 </script>
