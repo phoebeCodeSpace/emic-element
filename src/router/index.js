@@ -8,12 +8,13 @@ import pageInput from '@/pages/pageInput'
 import pageRadio from '@/pages/pageRadio'
 import pageCheckbox from '@/pages/pageCheckbox'
 import pageIcon from '@/pages/pageIcon'
+import pageUpload from '@/pages/pageUpload'
+import pageProgress from '@/pages/pageProgress'
 
 Vue.use(Router)
 
 const router = new Router({
-  routes: [
-    {
+  routes: [{
       path: '/',
       redirect: '/button'
     },
@@ -42,20 +43,30 @@ const router = new Router({
       path: '/input',
       name: 'pageInput',
       component: pageInput
-    },{
+    }, {
       path: '/radio',
       name: 'pageRadio',
       component: pageRadio
-    },{
+    }, {
       path: '/checkbox',
       name: 'pageCheckbox',
       component: pageCheckbox
+    },
+    {
+      path: '/upload',
+      name: 'pageUpload',
+      component: pageUpload
+    },
+    {
+      path: '/progress',
+      name: 'pageProgress',
+      component: pageProgress
     }
   ]
 })
 
 router.beforeEach((to, from, next) => {
-  if (window.location.pathname){
+  if (window.location.pathname) {
     window.location.pathname = ""
   }
   next()

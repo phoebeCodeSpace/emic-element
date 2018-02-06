@@ -64,8 +64,7 @@
 </template>
 
 <script>
-import Radio from "@/components/Radio";
-import RadioGroup from "@/components/RadioGroup";
+import {Radio,RadioGroup} from "@/components/radio";
 
 export default {
   name: "page-radio",

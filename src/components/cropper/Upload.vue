@@ -1,16 +1,11 @@
 <template>
   <div>
-
+    upload
   </div>
 </template>
 
 <script>
   export default {
-    name: 'upload',
-    
+    name: "upload"
   }
 </script>
-
-<style scoped>
-
-</style>

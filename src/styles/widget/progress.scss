@@ -1,0 +1,67 @@
+.#{$css-prefix}-progress {
+  position: relative;
+  // line
+  $status-list: (normal:$primary-color, error:$error-color, success:$success-color);
+  @each $status,
+  $color in $status-list {
+    &.#{$css-prefix}-progress-#{$status} {
+      color: $color;
+      .progress-bar-outer {
+        background-color: $progress-defalut-bg;
+      }
+      .progress-bar-inner {
+        background-color: $color;
+      }
+      .progress-circle-path {
+        stroke: $color;
+      }
+    }
+  }
+  &.progress-show-info {
+    .progress-bar {
+      width: 100%;
+      display: inline-block;
+      padding-right: 50px;
+      margin-right: -50px;
+      vertical-align: middle;
+    }
+  }
+  .progress-bar {
+    font-size: 0;
+    .progress-bar-outer,
+    .progress-bar-inner {
+      border-radius: 100px;
+    }
+    .progress-bar-outer {
+      width: 100%;
+      display: inline-block;
+    }
+    .progress-bar-inner {
+      height: 100%;
+      font-size: 12px;
+      color: #fff;
+      text-align: right;
+      transition: width $transition-timing-function $transition-duration;
+    }
+  }
+  .progress-info {
+    vertical-align: middle;
+    margin: 0 5px;
+  }
+  // round  
+  .progress-circle-track,
+  .progress-circle-path {
+    fill: none;
+  }
+  .progress-circle-track {
+    stroke: $progress-defalut-bg;
+  }
+  .progress-circle-path {
+    stroke-linecap: round;
+  }
+  .progress-circle-inner{
+    @include center-translate();
+    text-align: center;
+  }
+
+}

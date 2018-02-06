@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import SwitchBtn from "@/components/SwitchBtn"
+import SwitchBtn from "@/components/switch"
   export default {
     name: 'page-switch',
     components: {

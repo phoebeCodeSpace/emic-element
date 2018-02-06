@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import Input from "@/components/Input";
+import Input from "@/components/input";
 export default {
   name: "page-input",
   components: {

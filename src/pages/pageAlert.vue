@@ -12,7 +12,7 @@
 
 
 <script>
-import Alert from "@/components/Alert"
+import Alert from "@/components/alert"
   export default {
     name: 'page-alert',
     components:{

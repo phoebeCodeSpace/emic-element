@@ -2,21 +2,28 @@
     <button
       :class="classes"
       :disabled="disabled"
+      @click="handleClick"
     >
+      <Icon :type="icon"/>
       <slot></slot>
     </button>
 </template>
 
 <script>
 import { prefixCls } from "@/utils/config";
+import Icon from '@/components/icon';
 export default {
   name: "Button",
+  components: {
+    Icon
+  },
   props: {
     size: String,
     round: Boolean,
     plain: Boolean,
     disabled: Boolean,
-    type: String
+    type: String,
+    icon: String
   },
   computed: {
     classes() {
@@ -29,6 +36,11 @@ export default {
       }
         
       ]
+    }
+  },
+  methods: {
+    handleClick(e) {
+      this.$emit('click',e)
     }
   },
 };

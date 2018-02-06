@@ -4,6 +4,7 @@
 
 ## 风格指南
 
+## 组件
 
 ### base
 - [x] Icon 图标
@@ -13,12 +14,13 @@
 - [ ] Button 按钮
 - [x] Input 输入框
 - [x] Radio 单选框
-- [ ] Checkbox 复选框
+- [x] Checkbox 复选框
 - [x] Switch 开关
 - [ ] Select 选择框
 - [ ] Update 上传
 
 ### data
+- [ ] Progress 进度条
 - [ ] Pagination 分页
 
 ### view
