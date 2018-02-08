@@ -65,11 +65,11 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  if (window.location.pathname) {
-    window.location.pathname = ""
-  }
-  next()
-})
+// router.beforeEach((to, from, next) => {
+//   if (window.location.pathname) {
+//     window.location.pathname = ""
+//   }
+//   next()
+// })
 
 export default router;

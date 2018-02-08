@@ -20,7 +20,7 @@
 - [ ] Update 上传
 
 ### data
-- [ ] Progress 进度条
+- [x] Progress 进度条
 - [ ] Pagination 分页
 
 ### view

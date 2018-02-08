@@ -1,9 +1,16 @@
 <template>
   <div :class="uploadWrapClass">
-    <label>
+    <label @click="handleClick">
       <slot></slot>
-      <input type="file" @change="change">
+      <input type="file" @change="change" ref="input" name="file"
+        :multiple="multiple"
+      >
     </label>
+    <ul>
+      <li v-for="(file,index) in fileList" :key="index">
+        {{ file.name }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -15,18 +22,47 @@ export default {
   props: {
     action: {
       type: String,
-      required: true 
+      required: true
     },
+    multiple: Boolean,
+    data: {
+      type: Object,
+      default(){
+        return {}
+      }
+    },
+    accept: String,
+    defaultFileList: {
+      type: Array,
+      default(){
+        return []
+      }
+    }
   },
   computed: {
-    uploadWrapClass(){
-      return [`${prefixCls}-upload`]
+    uploadWrapClass() {
+      return [`${prefixCls}-upload`];
     }
+  },
+  data() {
+    return {
+      fileList: this.defaultFileList
+    };
   },
   methods: {
+    handleClick() {
+      this.$refs.input.click();
+    },
     change(e) {
-      console.log(e)
+      const files = e.target.files;
+      if(multiple){
+        this.fileList = [...this.fileList,...files]        
+      }else{
+        this.fileList = [files[0]]
+      }
+      console.log(this.fileList)
+     
     }
-  },
+  }
 };
 </script>
