@@ -1,8 +1,59 @@
-.#{$css-prefix}-upload{
-  label{
+.#{$css-prefix}-upload {
+  label {
     display: inline-block;
   }
-  input[type="file"]{
+  input[type="file"] {
     display: none;
+  }
+  .#{$css-prefix}-file-list {
+    margin: 10px auto;
+    i,
+    span {
+      vertical-align: middle;
+    }
+    .icon-order {
+      color: $primary-color;
+      margin: 0 5px;
+    }
+    [class*=-icon] {
+      font-size: 16px;
+    }
+    li {
+      transition: $transition;
+      &>p{
+        position: relative;
+        height: 24px;
+        line-height: 24px;
+      }
+      .uploaded:hover {
+        background-color: mix($placeholder-color, #fff, 15%);
+        border-radius: 4px;
+        cursor: pointer;
+        .icon-list-end{
+          display: none;
+        }
+        .icon-close {
+          display: inline-block;
+        }
+      }
+      .icon-close {
+        display: none;
+        color: $border-color;
+        &::before{
+          content: "\E62B";
+        }
+      }
+      .icon-list-end {
+        @include center-translate(y);
+        right: 5px;
+        font-size: 14px;
+        &.icon-error {
+          color: $error-color;
+        }
+        &.icon-success {
+          color: $success-color;
+        }
+      }
+    }
   }
 }
