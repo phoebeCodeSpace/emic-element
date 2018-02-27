@@ -11,12 +11,9 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-      '/Talk':{
-        target: "http://kfes.emic.com.cn:1045",
-        changeOrigin: true,
-        pathRewrite:{
-          '^/Talk':'/Talk'
-        }
+      '/admin':{
+        target: "http://www.emicnet.com/",
+        changeOrigin: true
       }
     },
 

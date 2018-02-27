@@ -1,3 +1,3 @@
-import Upload from './Upload'
+import Cropper from './Cropper'
 
-export default Upload
+export default Cropper

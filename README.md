@@ -18,10 +18,12 @@
 - [x] Switch 开关
 - [ ] Select 选择框
 - [ ] Update 上传
+- [ ] Cropper 裁剪
 
 ### data
 - [x] Progress 进度条
 - [ ] Pagination 分页
+- [ ] Table 表格
 
 ### view
 - [x] Alert 警告提示

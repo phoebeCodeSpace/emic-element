@@ -1,11 +1,11 @@
 <template>
-  <div>
-
-  </div>
+  <header>
+    <slot></slot>
+  </header>
 </template>
 
 <script>
   export default {
-    name: "Row"
+    name: "Header"
   }
 </script>

@@ -6,6 +6,6 @@
 
 <script>
   export default {
-    name: "Row"
+    name: "Table"
   }
 </script>

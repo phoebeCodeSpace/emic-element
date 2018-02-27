@@ -9,7 +9,10 @@ import pageRadio from '@/pages/pageRadio'
 import pageCheckbox from '@/pages/pageCheckbox'
 import pageIcon from '@/pages/pageIcon'
 import pageUpload from '@/pages/pageUpload'
+import pageCropper from '@/pages/pageCropper'
 import pageProgress from '@/pages/pageProgress'
+import pageGrid from '@/pages/pageGrid'
+import pageLayout from '@/pages/pageLayout'
 
 Vue.use(Router)
 
@@ -17,6 +20,16 @@ const router = new Router({
   routes: [{
       path: '/',
       redirect: '/button'
+    },
+    {
+      path: '/grid',
+      name: 'pageGrid',
+      component: pageGrid
+    },
+    {
+      path: '/layout',
+      name: 'pageLayout',
+      component: pageLayout
     },
     {
       path: '/icon',
@@ -56,6 +69,11 @@ const router = new Router({
       path: '/upload',
       name: 'pageUpload',
       component: pageUpload
+    },
+    {
+      path: '/cropper',
+      name: 'pageCropper',
+      component: pageCropper
     },
     {
       path: '/progress',

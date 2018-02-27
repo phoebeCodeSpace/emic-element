@@ -27,7 +27,13 @@ export default function upload(option) {
     }
   }
   const formData = new FormData();
-  formData.append(option.name, option.file, option.file.name)
+  const filename = option.file.name || `${Date.now()}.png`;
+  formData.append(option.name, option.file, filename)
+  if (option.data) {
+    Object.keys(option.data).forEach(key => {
+      formData.append(key, option.data[key]);
+    });
+  }
   xhr.open('POST', option.action, true);
   xhr.send(formData);
   // onload

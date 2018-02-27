@@ -1,17 +1,35 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <Layout id="app">
+    <Header>
+      <div class="logo">
+        <!-- <img src="/static/images/logo.png"/> -->
+      </div>
+    </Header>
+    
+    <Content class="content">
+      <Sidebar/>
+      <router-view/>
+    </Content>
+  </Layout>
 </template>
 
 <script>
+import { Layout, Header, Content,Sidebar, Footer } from "@/components/layout";
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    Layout,
+    Header,
+    Content,
+    Sidebar,
+    Footer
+  }
 }
 </script>
 
 <style lang="scss">
-#app{
+.content{
   margin: 15px;
 }
 table {
@@ -20,6 +38,11 @@ table {
   margin-bottom: 10px;
   td {
     width: 25%;
+    border-top: 1px solid #222;
   }
+}
+header{
+  height: 80px;
+  line-height: 80px;
 }
 </style>

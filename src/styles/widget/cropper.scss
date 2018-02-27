@@ -1,0 +1,60 @@
+.#{$css-prefix}-cropper-wrap {
+  .movement{
+    cursor: move;
+  }
+  .resize{
+    cursor: nwse-resize;
+  }
+  .cropper-area,
+  .preview-area {
+    float: left;
+    h5{
+      font: 14px/1 normal;
+      color: $text-color;
+      margin-bottom: 10px;
+    }
+    .tips{
+      color: $info-color;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 12px;
+    }
+    canvas{
+      display: block;
+    }
+  }
+  .cropper-area{
+    margin-right: 24px;
+    .re-upload{
+      margin-top: 14px;
+    }
+  }
+  .cropper-block{
+    text-align: center;
+    @include center-flex;
+    background-color: #edf2fd;
+    .canvas-box{
+      position: relative;
+      @include size(100%);
+      background-color: #100100;
+      &>canvas{
+        @include center-translate;
+      }
+    }
+  }
+  .preview-block{
+    background: #edf2fd url(../../static/images/demo-110.png) no-repeat center;
+    overflow: hidden;
+  }
+
+  .action-area{
+    font-size: 0;
+    margin-top: 30px;
+    button{
+      font-size: 14px;
+      &+button{
+        margin-left: 14px;
+      }
+    }
+  }
+}

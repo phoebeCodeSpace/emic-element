@@ -1,11 +1,11 @@
 <template>
   <div>
-    upload
+    <slot></slot>
   </div>
 </template>
 
 <script>
   export default {
-    name: "upload"
+    name: "Layout"
   }
 </script>

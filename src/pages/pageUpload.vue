@@ -1,11 +1,11 @@
 <template>
   <div style="width=300px">
     <h3>一次选择一个文件</h3>
-    <Upload action="/Talk/CertEp/uploadFile">
+    <Upload action="admin/api/upload" :data="uploadData">
       <Button icon="upload">上传文件</Button>
     </Upload>
     <h3>一次选择多个文件</h3>    
-    <Upload action="/Talk/CertEp/uploadFile" multiple>
+    <Upload action="admin/api/upload" multiple :data="uploadData">
       <Button icon="upload">上传文件</Button>
     </Upload>
   </div>
@@ -20,6 +20,13 @@ export default {
   components: {
     Upload,
     Button
+  },
+  data() {
+    return {
+      uploadData: {
+        "bizKey":"news"
+      }
+    }
   }
 };
 </script>
