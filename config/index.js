@@ -12,7 +12,7 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/admin':{
-        target: "http://www.emicnet.com/",
+        target: "##",
         changeOrigin: true
       }
     },
